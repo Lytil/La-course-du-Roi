@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+
+<body>
+<div class="container">
+    <form >
+      <p>Inscription</p>
+      <input type="email" placeholder="Email"><br>
+      <input type="password" placeholder="Mot de passe"><br>
+      <input type="date" id="age"> 
+      <input type="button" value="Connexion"><br>
+      
+      
+      <a href="#">Mot de passe oublié</a>
+    </form>
+  
+    <div class="drop drop-1"></div>
+    <div class="drop drop-2"></div>
+    <div class="drop drop-3"></div>
+    <div class="drop drop-4"></div>
+    <div class="drop drop-5"></div>
+  </div>
+</body>
