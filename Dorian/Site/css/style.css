@@ -20,6 +20,10 @@ h1{
     font-family: UECHIGOT;
     font-size: 90px;
 }
+h4{
+    color:#fff;
+    font-family: Arial, Helvetica;
+}
 p{
     color:#fff;
     font-family: Arial, Helvetica;
@@ -104,32 +108,32 @@ header.sticky ul li a {
 .banniere{
     position: relative;
     width: 100%;
-    height: 100vh;
+    height: 85vh;
     background: url(../image/bg.jpg);
     background-size: cover;
     z-index: -10;
     margin-bottom: 100px;
 }
 
-.degrade{
+
+.first-degrade{
     background: linear-gradient( #f0f0f0,#f0f0f0,#000);
     height: 250px;
-    text-align: center;
 }
-.degradebas{
-    background: linear-gradient(360deg, #f0f0f0,#f0f0f0,#000);
-    height: 250px;
-}
+
+
+
 .titre{
     padding-top: 50px;
+    text-align: center;
+    
 }
-.contenu{
+#contenu{
     position: relative;
     padding-left: 20%;
     padding-right: 20%;
     padding-top: 100px;
     padding-bottom: 100px;
-    border: solid;
     width: 100%;
     text-align: center;
     background-color: #000;
@@ -137,12 +141,69 @@ header.sticky ul li a {
     flex-direction: column;
     gap: 100px;
 }
-.container-second{
+.container{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     gap: 50px;
 }
-.image-second{
+.image-first{
     width: 25%;
+}
+.degradebas{
+    background:linear-gradient(360deg, #f0f0f0,#000);
+    height: 60px;
+}
+.degrade{
+    background: linear-gradient( #f0f0f0,#000);
+    height: 60px;
+}
+
+.confdegrade{
+    background: linear-gradient(45deg,#BC2C1A,#1B539D);
+    height: 30em;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction:column;
+    border-radius: 60px;
+    padding: 0% 6%;
+    align-items: center;
+}
+
+.button-container{
+    height: 100px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.button-conf{
+    width: 200px;
+    height:75px;
+    border: none;
+    border-radius: 60px;
+    background: #FFCF33;
+    transition: 0.3s;
+    font-family: NGS;
+    font-size: 35px;
+}
+.button-conf:hover{
+    width: 210px;
+    height: 85px;
+    font-size: 38px;
+}
+
+
+footer{
+    display : flex;
+    position: relative;
+    background-color: #1B539D;
+    justify-content: flex-start;
+    padding: 30px;
+    padding-left: 200px;
+    gap: 50px;
+}
+.blocf{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
