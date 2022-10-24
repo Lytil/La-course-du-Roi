@@ -3,9 +3,9 @@
     PDO('mysql:host=localhost;port=3306;dbname=lcdr','root','');
     $requete='SELECT nomCategorie, reglement, lienFederation FROM categorie';
     $resultats=$connection->query($requete);
-    $tabProduits=$resultats->fetchAll();
+    $tabCategorie=$resultats->fetchAll();
     $resultats->closeCursor();
-    $nbproduits=count($tabProduits);
+    $nbCategorie=count($tabCategorie);
 
     class Categorie
     {
@@ -25,4 +25,9 @@
             echo "Catégorie : ".$this->nomCategorie."<br>".$this->reglement."<br>".$this->lienFederation;
         }
     }
+
+    $tabCategorie=new Categorie($nbCategorie);
+    $tabCategorie->affichage();
+
+    // http://sdz.tdct.org/sdz/rogrammez-en-oriente-objet-en-php.html#Utiliserlaclasse
 ?>

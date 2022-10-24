@@ -1,28 +1,31 @@
 <?php
     $connection=new
     PDO('mysql:host=localhost;port=3306;dbname=lcdr','root','');
-    $requete='SELECT nomParcours, descriptif, distance FROM parcours';
+    $requete='SELECT nomParcours, descriptif, distanceMetres FROM parcours';
     $resultats=$connection->query($requete);
-    $tabProduits=$resultats->fetchAll();
+    $tabParcours=$resultats->fetchAll();
     $resultats->closeCursor();
-    $nbproduits=count($tabProduits);
+    $nbParcours=count($tabParcours);
 
     class Parcours
     {
         public $nomParcours="";
         public $descriptif="";
-        public $distance="";
+        public $distanceMetres="";
 
-        public function __construct($nomParcours, $descriptif, $distance)
+        public function __construct($nomParcours, $descriptif, $distanceMetres)
         {
             $this->nomParcours=$nomParcours;
             $this->descriptif=$descriptif;
-            $this->distance=$distance;
+            $this->distanceMetres=$distanceMetres;
         }
 
         public function affichage()
         {
-            echo $this->nomParcours."<br>".$this->descriptif."<br>Distance : ".$this->distance;
+            echo $this->nomParcours."<br>".$this->descriptif."<br>Distance : ".$this->distanceMetres;
         }
     }
+
+    $tabParcours=new Parcours($nbParcours);
+    $tabParcours->affichage();
 ?>
