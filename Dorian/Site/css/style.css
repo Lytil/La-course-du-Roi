@@ -83,16 +83,14 @@ header ul{
 header ul li{
     position: relative; 
     list-style: none;
+    border-bottom: solid;
+    transition: 0.3s;
 }
 header ul li:hover{
-    background-color: #000;
-    border-radius: 25px;
     padding-top: 9px;
     padding-bottom: 6px;
 }
 header.sticky ul li:hover{
-    background-color: #fff;
-    border-radius: 25px;
     padding-top: 9px;
     padding-bottom: 6px;
 }
@@ -109,7 +107,6 @@ header ul li a{
 }
 
 header.sticky ul li a {
-    color: #000;
     font-size: 29px;
 }
 /*Fin de menu*/
@@ -133,6 +130,10 @@ header.sticky ul li a {
     margin-bottom: 100px;
     background-attachment: fixed;
 }
+
+
+
+
 
 
 .first-degrade{
@@ -182,17 +183,15 @@ header.sticky ul li a {
 /*Confrerie*/
 .confdegrade{
     background: linear-gradient(45deg,#BC2C1A, #C39D63);
-    height: 480px;
+    height: 49.53vh;
     display: flex;
     justify-content: space-evenly;
     flex-direction:column;
     border-radius: 60px;
     padding: 0% 6%;
-    align-items: center;
+    align-items: center;    
 }
-.confrerie-para{
-    width: 100%;
-}
+
 .button-container{
     height: 100px;
     align-items: center;
@@ -214,7 +213,6 @@ header.sticky ul li a {
     height: 85px;
     font-size: 38px;
 }
-
 /*Fin confrerie*/
 
 
