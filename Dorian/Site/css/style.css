@@ -19,11 +19,9 @@ h1{
     color: #C39D63;
     font-family: UECHIGOT;
     font-size: 9.28vh;
+    text-align: center;
 }
-h4{
-    color:#fff;
-    font-family: Arial, Helvetica;
-}
+
 p{
     color:#fff;
     font-family: Arial, Helvetica;
@@ -85,6 +83,7 @@ header ul li{
     list-style: none;
     border-bottom: solid;
     transition: 0.3s;
+    border-bottom-width: 2px;
 }
 header ul li:hover{
     padding-top: 9px;
@@ -119,7 +118,6 @@ header.sticky ul li a {
 
 
 
-
 .banniere{
     position: relative;
     width: 100%;
@@ -136,60 +134,57 @@ header.sticky ul li a {
 
 
 
-.first-degrade{
-    background: linear-gradient(#f0f0f0 ,#1f1f1f);
-    height:15.48vh;
-}
 
 
-
-.titre{
-    padding-top: 5.16vh;
-    text-align: center;
-    
-}
 #contenu{
     position: relative;
     padding-left: 20%;
     padding-right: 20%;
     padding-top: 100px;
     padding-bottom: 100px;
+    margin-top: 20px;
+    margin-bottom: 50px;
     width: 100%;
     text-align: center;
-    background-color: #1f1f1f;
     display: flex;
     flex-direction: column;
     gap: 10.31vh;
+}
+
+
+/*Prez Evenement*/
+.para-image{
+    background-image: linear-gradient( rgba(31, 31, 31, 0.6),rgba(31, 31, 31, 0.6)), url("https://images.unsplash.com/photo-1552840687-b25e05d08047?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80");
 }
 .container{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     gap: 50px;
+    align-items: center;
 }
 .image-first{
     width: 25%;
-}
-.degradebas{
-    background:linear-gradient(360deg, #f0f0f0,#1f1f1f);
-    height: 60px;
-}
-.degrade{
-    background: linear-gradient( #f0f0f0,#1f1f1f);
-    height: 60px;
+    height: 25% ;
 }
 
 
 /*Confrerie*/
 .confdegrade{
-    background: linear-gradient(45deg,#BC2C1A, #C39D63);
-    height: 49.53vh;
+    position: relative;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    margin-left: 20%;
+    margin-right: 20%;
+    background: linear-gradient(45deg,rgba(188, 44, 26, 0.6),rgba(195, 157, 99, 0.6)), url("https://images.unsplash.com/photo-1552840687-b25e05d08047?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80");
+    height: auto;
     display: flex;
     justify-content: space-evenly;
     flex-direction:column;
     border-radius: 60px;
-    padding: 0% 6%;
-    align-items: center;    
+    padding: 6% 6%;
+    align-items: center;   
+    gap: 5vh; 
 }
 
 .button-container{
@@ -198,6 +193,7 @@ header.sticky ul li a {
     display: flex;
     justify-content: center;
 }
+
 .button-conf{
     width: 200px;
     height:75px;
@@ -208,6 +204,7 @@ header.sticky ul li a {
     font-family: NGS;
     font-size: 35px;
 }
+
 .button-conf:hover{
     width: 210px;
     height: 85px;
@@ -215,7 +212,11 @@ header.sticky ul li a {
 }
 /*Fin confrerie*/
 
-
+/*Programme*/
+.para-image3{
+    background-image: linear-gradient( rgba(31, 31, 31, 0.6),rgba(31, 31, 31, 0.6)), url("../image/bg.jpg");
+}
+/*Fin Programme*/
 
 
 footer{
@@ -233,3 +234,30 @@ footer{
     flex-direction: column;
     gap: 20px;
 }
+
+footer div h5 a{
+    text-decoration: none;
+    color: #fff;
+    font-family: Arial, Helvetica;
+}
+
+
+/*Debut de mettre un titre*/
+.epreuve-container{
+    position: relative;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    margin-left: 20%;
+    margin-right: 20%;
+    background: linear-gradient(45deg,rgba(31, 31, 31, 0.6),rgba(31, 31, 31, 0.6)), url("https://images.unsplash.com/photo-1552840687-b25e05d08047?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80");
+    height: auto;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction:column;
+    border-radius: 60px;
+    padding: 6% 6%;
+    align-items: center;   
+    gap: 5vh; 
+}
+
+/*Fin de mettre un titre*/
