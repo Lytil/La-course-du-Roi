@@ -5,8 +5,14 @@ const options = {
     threshold: ratio 
 }
 
-const textAnimer = function () {
-    console.log('textAnimer')
+const textAnimer = function (entries, observer) {
+    entries.forEach(function(entry){
+        if(entry.intersection > rattio) {
+        } else {
+        console.log(entry.intersectionRatio)
+        }
+    })
 }
 
 const observer = new IntersectionObsserver(textAnimer, options);
+observer.observe(document.querySelector('.reveal'))
