@@ -41,7 +41,6 @@ video {
   font-size: 18px;
   background: #fff;
 
-  /* Center slide text vertically */
   display: -webkit-box;
   display: -ms-flexbox;
   display: -webkit-flex;
@@ -55,7 +54,7 @@ video {
   -webkit-align-items: center;
   align-items: center;
 }
-/* custmm bullets style */
+
 .swiper-pagination-bullet {
   width: 20px;
   height: 20px;
