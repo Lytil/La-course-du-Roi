@@ -1,0 +1,109 @@
+#fond{
+    background: #3a3a3a;
+    padding-bottom: 0;
+}
+#epreuve{
+    position: relative;
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-bottom: 20px;
+    width: 100%;
+    margin-top: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+.grille-age{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+}
+
+
+.categorie-adulte{
+    grid-column: 1;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    height:31.25em ;
+}
+
+.categorie-enfant{
+    grid-column: 2;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    height:31.25em;
+}
+
+.flipAd-container{
+    display: flex;
+    justify-content: space-around;
+}
+
+.flipEn-container{
+    display: flex;
+    justify-content: center;
+}
+
+img{
+    width: 100%;
+
+}
+
+
+
+
+
+
+
+.container {
+    width: 18.75em;
+    height: 25em;
+    perspective: 50em;
+}
+  
+.container:hover > .card {
+    cursor: pointer;
+    transform: rotateY(180deg);
+}
+  
+.card {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    transition: transform 1500ms;
+    transform-style: preserve-3d;
+}
+  
+.front,
+.back {
+    height: 100%;
+    width: 100%;
+    border-radius: 2rem;
+    box-shadow: 0 0 5px 2px rgba(247, 66, 66, 0.25);
+    position: absolute;
+    backface-visibility: hidden;
+}
+  
+.front{
+    background-color: aquamarine;
+    display: flex;
+    align-items: center;
+}
+.front p{
+    text-align: center;
+    padding-top: 2em;
+    font-size: larger;
+}
+.back{
+    background-color: #ff4343;
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+}
