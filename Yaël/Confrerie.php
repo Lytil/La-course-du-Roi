@@ -1,11 +1,10 @@
 <?php
-    $connection=new
+    $db=new
     PDO('mysql:host=localhost;port=3306;dbname=lcdr','root','');
-    $requete='SELECT nomConfrerie, bio FROM confrerie';
-    $resultats=$connection->query($requete);
-    $tabProduits=$resultats->fetchAll();
-    $resultats->closeCursor();
-    $nbproduits=count($tabProduits);
+    $results=$db->query('SELECT nomConfrerie, bio FROM confrerie');
+    $tab=$results->fetchAll();
+    $results->closeCursor();
+    $confreries=count($tab);
 
     class Confrerie
     {
@@ -20,7 +19,14 @@
 
         public function affichage()
         {
-            echo $this->nomConfrerie."<br>".$this->bio;
+            echo "<b>".$this->nomConfrerie."</b><br><br>".$this->bio."<br><br>";
         }
+    }
+
+    $confrerie=array();
+    for($i=0;$i<$confreries;$i++)
+    {
+        $confrerie[$i]=new Confrerie($tab[$i][0], $tab[$i][1]);
+        $confrerie[$i]->affichage();
     }
 ?>

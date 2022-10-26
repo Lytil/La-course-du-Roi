@@ -1,6 +1,5 @@
 <?php
-    $db=new
-    PDO('mysql:host=localhost;port=3306;dbname=lcdr','root','');
+    $db=new PDO('mysql:host=localhost;port=3306;dbname=lcdr','root','');
     $results=$db->query('SELECT nomCategorie, reglement, lienFederation FROM categorie');
     $tab=$results->fetchAll();
     $results->closeCursor();
@@ -21,7 +20,7 @@
 
         public function affichage()
         {
-            echo 'Catégorie : ', $this->nomCategorie, '<br><br>', $this->reglement, '<br><br>', $this->lienFederation, '<br><br>';
+            echo "Catégorie : ".$this->nomCategorie."<br><br>".$this->reglement."<br><br>".$this->lienFederation."<br><br>";
         }
     }
 

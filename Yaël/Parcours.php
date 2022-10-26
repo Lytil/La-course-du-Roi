@@ -1,11 +1,10 @@
 <?php
-    $connection=new
+    $db=new
     PDO('mysql:host=localhost;port=3306;dbname=lcdr','root','');
-    $requete='SELECT nomParcours, descriptif, distanceMetres FROM parcours';
-    $resultats=$connection->query($requete);
-    $tabParcours=$resultats->fetchAll();
-    $resultats->closeCursor();
-    $nbParcours=count($tabParcours);
+    $results=$db->query('SELECT nomParcours, descriptif, distanceMetres FROM parcours');
+    $tab=$results->fetchAll();
+    $results->closeCursor();
+    $parcours_=count($tab);
 
     class Parcours
     {
@@ -26,6 +25,10 @@
         }
     }
 
-    $tabParcours=new Parcours($nbParcours);
-    $tabParcours->affichage();
+    $parcours=array();
+    for($i=0;$i<$parcours_;$i++)
+    {
+        $parcours[$i]=new Parcours($tab[$i][0], $tab[$i][1], $tab[$i][2]);
+        $parcours[$i]->affichage();
+    }
 ?>
