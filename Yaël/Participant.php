@@ -1,30 +1,30 @@
 <?php
-    $objetPDO=new PDO('mysql:host=localhost;port=3306;dbname=lcdr','root','');
+    $bd=new PDO('mysql:host=localhost;port=3306;dbname=lcdr','root','');
+    if (isset($_POST['nomParticipant']) && isset($_POST['prenom']) && isset($_POST['age']) && isset($_POST['adresse']) && isset($_POST['telephone']) && isset($_POST['mail']))
+    {
+        $nomParticipant=$_POST['nomParticipant'];
+        $prenom=$_POST['prenom'];
+        $age=$_POST['age'];
+        $adresse=$_POST['adresse'];
+        $telephone=$_POST['telephone'];
+        $mail=$_POST['mail'];
 
-    if(isset($_POST['nomParticipant'])){$nomParticipant=$_POST['nomParticipant'];}else{$nomParticipant='';}
-    if(isset($_POST['prenom'])){$prenom=$_POST['prenom'];}else{$prenom='';}
-    if(isset($_POST['age'])){$age=$_POST['age'];}else{$age='';}
-    if(isset($_POST['adresse'])){$adresse=$_POST['adresse'];}else{$adresse='';}
-    if(isset($_POST['telephone'])){$telephone=$_POST['telephone'];}else{$telephone='';}
-    if(isset($_POST['prenom'])){$prenom=$_POST['prenom'];}else{$prenom='';}
-    if(isset($_POST['mail'])){$mail=$_POST['mail'];}else{$mail='';}
+        $req=$bd->prepare('INSERT INTO participant(nomParticipant, prenom, age, adresse, telephone, mail) VALUES (:nomParticipant, :prenom, :age, :adresse, :telephone, :mail)');
+        $req->bindParam(':nomParticipant',$nomParticipant);
+        $req->bindParam(':prenom',$prenom);
+        $req->bindParam(':age',$age);
+        $req->bindParam(':adresse',$adresse);
+        $req->bindParam(':telephone',$telephone);
+        $req->bindParam(':mail',$mail);
 
-    $PDOresults=$objetPDO->prepare('INSERT INTO participant() VALUES (NULL, :nomParticipant, :prenom, :age, :adresse, :telephone, :mail)');
-    $PDOresults->bindValue(':nomParticipant', $nomParticipant, PDO::PARAM_STR);
-    $PDOresults->bindValue(':prenom', $prenom, PDO::PARAM_STR);
-    $PDOresults->bindValue(':age', $prenom, PDO::PARAM_STR);
-    $PDOresults->bindValue(':adresse', $adresse, PDO::PARAM_STR);
-    $PDOresults->bindValue(':telephone', $telephone, PDO::PARAM_STR);
-    $PDOresults->bindValue(':mail', $mail, PDO::PARAM_STR);
-    $PDOresults->execute();
+        $req->execute();
+    }
 
-    $connection=new
-    PDO('mysql:host=localhost;port=3306;dbname=lcdr','root','');
-    $requete='SELECT nomParticipant, prenom, age, adresse, telephone, mail FROM participant';
-    $resultats=$connection->query($requete);
-    $tabProduits=$resultats->fetchAll();
-    $resultats->closeCursor();
-    $nbproduits=count($tabProduits);
+    $db=new PDO('mysql:host=localhost;port=3306;dbname=lcdr','root','');
+    $results=$db->query('SELECT nomParticipant, prenom, age, adresse, telephone, mail FROM participant');
+    $tab=$results->fetchAll();
+    $results->closeCursor();
+    $participants=count($tab);
 
     class Participant
     {
@@ -34,6 +34,16 @@
         private $adresse="";
         private $telephone="";
         private $mail="";
+
+        public function __construct($nomParticipant, $prenom, $age, $adresse, $telephone, $mail)
+        {
+            $this->nomParticipant=$nomParticipant;
+            $this->prenom=$prenom;
+            $this->age=$age;
+            $this->adresse=$adresse;
+            $this->telephone=$telephone;
+            $this->mail=$mail;
+        }
     }
 ?>
 
@@ -47,14 +57,14 @@
 
 <body>
     <div class="container">
-        <form>
+        <form method="POST" action="">
             <p>Pré-inscription</p>
-            <input type="text" id="nomParticipant" placeholder="Nom">
-            <input type="text" id="prenom" placeholder="Prénom"><br>
-            <input type="int" id="age" placeholder="Âge"><br>
-            <input type="text" id="adresse" placeholder="Adresse"><br>
-            <input type="int" id="telephone" placeholder="Téléphone">
-            <input type="email" id="mail" placeholder="Email"><br>
+            <input type="text" id="nomParticipant" name="nomParticipant" placeholder="Nom">
+            <input type="text" id="prenom" name="prenom" placeholder="Prénom"><br>
+            <input type="int" id="age" name="age" placeholder="Âge"><br>
+            <input type="text" id="adresse" name="adresse" placeholder="Adresse"><br>
+            <input type="int" id="telephone" name="telephone" placeholder="Téléphone">
+            <input type="email" id="mail" name="mail" placeholder="Email"><br>
             <input type="submit" id="submit" value="Valider"><br>
         </form>
     </div>
