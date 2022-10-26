@@ -59,12 +59,12 @@
     <div class="container">
         <form method="POST" action="">
             <p>Pré-inscription</p>
-            <input type="text" id="nomParticipant" name="nomParticipant" placeholder="Nom">
-            <input type="text" id="prenom" name="prenom" placeholder="Prénom"><br>
-            <input type="int" id="age" name="age" placeholder="Âge"><br>
-            <input type="text" id="adresse" name="adresse" placeholder="Adresse"><br>
-            <input type="int" id="telephone" name="telephone" placeholder="Téléphone">
-            <input type="email" id="mail" name="mail" placeholder="Email"><br>
+            <input type="text" id="nomParticipant" name="nomParticipant" placeholder="Nom" required>
+            <input type="text" id="prenom" name="prenom" placeholder="Prénom" required><br>
+            <input type="int" id="age" name="age" placeholder="Âge" required><br>
+            <input type="text" id="adresse" name="adresse" placeholder="Adresse" required><br>
+            <input type="int" id="telephone" name="telephone" placeholder="Téléphone" required>
+            <input type="email" id="mail" name="mail" placeholder="Email" required><br>
             <input type="submit" id="submit" value="Valider"><br>
         </form>
     </div>
