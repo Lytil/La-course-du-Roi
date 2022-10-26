@@ -1,7 +1,7 @@
 var swiper = new Swiper('.swiper-container', {
   loop:true,
   autoplay: {
-    delay: 4000
+    delay: 2500
   },
   pagination: {
     el: '.swiper-pagination',
@@ -11,3 +11,4 @@ var swiper = new Swiper('.swiper-container', {
     },
   },
 });
+
