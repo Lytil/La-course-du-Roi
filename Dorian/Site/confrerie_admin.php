@@ -53,7 +53,7 @@
         </div>
         </form>
         <br>
-        <h1>Présentation des Confréries</h1>
+        <h1 class="conf-titre">Présentation des Confréries</h1>
         <section  class="presentation-conf">
             <div class="contenu">
                 <?php
