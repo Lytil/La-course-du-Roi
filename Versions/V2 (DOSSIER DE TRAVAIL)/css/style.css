@@ -1,0 +1,380 @@
+@font-face{
+    font-family: NGS;
+    src:url(../font/NGS.ttf);
+}
+@font-face {
+    font-family: UECHIGOT;
+    src: url(../font/UECHIGOT.TTF);
+}
+@font-face {
+    font-family: FCT;
+    src: url(../font/FCT.ttf);
+}
+@font-face {
+    font-family: blackstone;
+    src: url(../font/blackstone.ttf);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: #f0f0f0;
+    min-height: 200vh;
+}
+h1, h2{
+    color: #C39D63;
+    font-family: UECHIGOT;
+    font-size: 9.28vh;
+    text-align: center;
+}
+
+p{
+    color:#fff;
+    font-family: Arial, Helvetica;
+    text-align: justify;
+}
+
+
+/*----------------Début navbar----------------*/
+header{
+    position: fixed;
+    top: 0;
+    left:0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-content: center;
+    transition: 0.6s;
+    padding: 10px 150px;
+    background-color: #C39D63;
+}
+
+header.sticky{
+    padding: 3px 150px;
+    z-index: 1;
+}
+
+
+
+/*Debut logo*/
+/*changer la valeur des tailles par des % des que possible (quand on aura le logo)*/
+header .placementlogo{
+    grid-column: 1/2;
+    display: flex;
+    justify-content: center;
+
+}
+header .logo{
+    position: relative;
+    transition: 0.6s;
+    height: 12.31vh;
+}
+header.sticky .logo{
+    height:7.22vh;
+}
+/*Fin logo*/
+
+/*Menu*/
+
+header ul{
+    grid-column: 1/3;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+header ul li{
+    position: relative; 
+    list-style: none;
+
+}
+header ul li:hover{
+    padding-top: 9px;
+    padding-bottom: 6px;
+    border-bottom: solid#fff;
+    border-width: 1.5px;
+}
+header.sticky ul li:hover{
+    padding-top: 9px;
+    padding-bottom: 6px;
+}
+header ul li a{
+    position: relative;
+    margin: 0 15px;
+    text-decoration: none;
+    color: #fff;
+    letter-spacing: 4px;
+    font-size: 35px;
+    transition: 0.6s;
+    font-family: NGS;
+
+}
+
+
+header.sticky ul li a {
+    font-size: 29px;
+}
+/*Fin de menu*/
+
+/*-----------Fin navbar---------------*/
+
+
+
+
+
+/*-----------Début Caroussel*/
+
+.banniere{
+    margin-top: 7%;
+    position: relative;
+    width: 100%;
+    height: 85vh;
+    background-size: cover;
+    z-index: -10;
+    margin-bottom: 50px;
+    background-attachment: fixed;
+}
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  font-family: 'Josefin Sans', sans-serif;
+}
+.tbanniere {
+  position: absolute;
+  z-index: 2;
+  top: 16%;
+  text-align: center;
+  width: 50%;
+  min-width: 400px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-transform: uppercase;
+  letter-spacing: .6rem;
+  color: white;
+  font-size: 4.5rem;
+  text-shadow: 2px 2px 2px #333;
+  line-height: 6rem;
+  user-select: none;
+  height: 100vh;
+  font-family: 'Josefin Sans', sans-serif;
+}
+.tbanniere2 {
+  position: absolute;
+  z-index: 2;
+  top: 25%;
+  text-align: center;
+  width: 70%;
+  min-width: 200px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-transform: uppercase;
+  letter-spacing: .4rem;
+  color: white;
+  font-size: 1.5rem;
+  text-shadow: 2px 2px 2px #333;
+  line-height: 6rem;
+  user-select: none;
+  height: 50vh;
+  font-family: 'Josefin Sans', sans-serif;
+}
+video {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.swiper-pagination-bullet {
+  width: 40px;
+  height: 40px;
+  line-height: 30px;
+  text-align: center;
+  font-size: 0px;
+  color:#000;
+  opacity: 1;
+  background: rgba(0,0,0,0.2);
+}
+.swiper-pagination-bullet-active {
+  color:#fff;
+  background-color: orange;
+}
+
+
+/*--------Fin Caroussel-------*/
+
+
+
+
+#contenu{
+    position: relative;
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10.31vh;
+}
+
+
+/*Prez Evenement*/
+.para-image{
+    background-image: linear-gradient( rgba(31, 31, 31, 0.6),rgba(31, 31, 31, 0.6)), url("https://images.unsplash.com/photo-1552840687-b25e05d08047?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80");
+}
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 50px;
+    align-items: center;
+}
+.image-first{
+    width: 25%;
+    height: 25% ;
+}
+
+
+/*Confrerie*/
+.confdegrade{
+    position: relative;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    margin-left: 20%;
+    margin-right: 20%;
+    background: linear-gradient(45deg,rgba(188, 44, 26, 0.6),rgba(195, 157, 99, 0.6)), url("https://images.unsplash.com/photo-1552840687-b25e05d08047?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80");
+    height: auto;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction:column;
+    border-radius: 60px;
+    padding: 6% 6%;
+    align-items: center;   
+    gap: 5vh; 
+}
+
+.button-container{
+    height: 100px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.button-conf{
+    width: 200px;
+    height:75px;
+    border: none;
+    border-radius: 60px;
+    background: #FFCF33;
+    transition: 0.3s;
+    font-family: NGS;
+    font-size: 35px;
+}
+
+.button-conf:hover{
+    width: 210px;
+    height: 85px;
+    font-size: 38px;
+}
+/*Fin confrerie*/
+
+/*Programme*/
+.para-image3{
+    background-image: linear-gradient( rgba(31, 31, 31, 0.6),rgba(31, 31, 31, 0.6)), url("../image/bg.jpg");
+}
+/*Fin Programme*/
+
+
+/*Debut de Epreuves*/
+.epreuve-container{
+    position: relative;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    margin-left: 20%;
+    margin-right: 20%;
+    background: linear-gradient(45deg,rgba(31, 31, 31, 0.6),rgba(31, 31, 31, 0.6)), url("https://images.unsplash.com/photo-1552840687-b25e05d08047?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80");
+    height: auto;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction:column;
+    border-radius: 60px;
+    padding: 6% 6%;
+    align-items: center;   
+    gap: 5vh; 
+}
+/*Fin de Epreuves*/
+
+footer{
+    display : flex;
+    position: relative;
+    background-color: #1f1f1f;
+    justify-content: flex-start;
+    padding: 30px;
+    padding-left: ;
+    gap: 50px;
+    margin-top: 20px;
+}
+.blocf{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+footer div h5 a{
+    text-decoration: none;
+    color: #fff;
+    font-family: Arial, Helvetica;
+}
+.imgsponsor {
+    display: flex;
+    align-items: center;
+}
+.imgsponsor > img {
+    width: 5%;
+    padding: 10px;
+}
+.blocnav {
+    display: flex;
+    flex-direction: row-reverse; 
+}
+.blocnav h5 {
+    padding: 10px;
+}
+.btnadmin { 
+      display: flex;
+      text-align: right;
+ }
