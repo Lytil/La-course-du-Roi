@@ -1,3 +1,18 @@
+<?php
+    $bd=new PDO('mysql:host=localhost;port=3306;dbname=lcdr','root','');
+    if (isset($_POST['nomConfrerie2']) && isset($_POST['bio2']))
+    {
+        $nomConfrerie=$_POST['nomConfrerie2'];
+        $bio=$_POST['bio2'];
+
+        $req=$bd->prepare('INSERT INTO confrerie(nomConfrerie, bio) VALUES (:nomConfrerie, :bio)');
+        $req->bindParam(':nomConfrerie',$nomConfrerie);
+        $req->bindParam(':bio',$bio);
+
+        $req->execute();
+    }
+?>
+
 <!doctype HTML>
 <html lang="fr">
     <head>
@@ -21,14 +36,21 @@
         </select>
         <button id="button">Consulter</button>
         </form>
-        <br>
+        <br><br>
+        <form method="POST" action="">
+            <label for="nomConfrerie2">Nom : </label>
+            <input type="text" id="nomConfrerie2" name="nomConfrerie2" required><br><br>
+            <label for="bio2">Description : </label>
+            <input type="text" id="bio2" name="bio2" required><br><br>
+            <button id="buttonAdd">Ajouter</button>
+        </form>
+        <br><br>
     </body>
 </html>
 
 <?php
-    $db=new
-    PDO('mysql:host=localhost;port=3306;dbname=lcdr','root','');
-    $results=$db->query('SELECT nomConfrerie, bio FROM confrerie');
+    $db=new PDO('mysql:host=localhost;port=3306;dbname=lcdr','root','');
+    $results=$db->query('SELECT idConfrerie, nomConfrerie, bio FROM confrerie');
     $tab=$results->fetchAll();
     $results->closeCursor();
     $confreries=count($tab);
@@ -53,7 +75,9 @@
     $confrerie=array();
     for($i=0;$i<$confreries;$i++)
     {
-        $confrerie[$i]=new Confrerie($tab[$i][0], $tab[$i][1]);
+        $confrerie[$i]=new Confrerie($tab[$i][1], $tab[$i][2]);
         $confrerie[$i]->affichage();
+        echo "<form method='POST' action='modifierConfrerie.php?id=".$tab[$i][0]."'><label for='editNomConfrerie'>Modifier le nom : </label><input type='text' id='editNomConfrerie' name='editNomConfrerie'><label for='editBio'> Modifier la description : </label><input type='text' id='editBio' name='editBio'> <button id='buttonEdit'>Effectuer les modifications</button></form><br>";
+        echo "<form method='POST' action='supprimerConfrerie.php?id=".$tab[$i][0]."'><button id='buttonSup'>Supprimer</button></form><br><br>";
     }
 ?>

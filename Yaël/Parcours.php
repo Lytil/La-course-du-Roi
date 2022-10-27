@@ -21,7 +21,7 @@
 
         public function affichage()
         {
-            echo $this->nomParcours."<br>".$this->descriptif."<br>Distance : ".$this->distanceMetres;
+            echo $this->nomParcours."<br>".$this->descriptif."<br>Distance : ".$this->distanceMetres."<br><br>";
         }
     }
 
