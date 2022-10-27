@@ -61,7 +61,7 @@
             <p>Pré-inscription</p>
             <input type="text" id="nomParticipant" name="nomParticipant" placeholder="Nom" required>
             <input type="text" id="prenom" name="prenom" placeholder="Prénom" required><br>
-            <input type="int" id="age" name="age" placeholder="Âge" required><br>
+            <input type="number" id="age" name="age" min="14" max="99" placeholder="Âge" required><br>
             <input type="text" id="adresse" name="adresse" placeholder="Adresse" required><br>
             <input type="int" id="telephone" name="telephone" placeholder="Téléphone" required>
             <input type="email" id="mail" name="mail" placeholder="Email" required><br>
