@@ -28,6 +28,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `caissesavon` (
+  `idCaisseSavon` int(11) PRIMARY KEY NOT NULL AUTO_INCREMENT,
   `nomCaisseSavon` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -38,6 +39,7 @@ CREATE TABLE `caissesavon` (
 --
 
 CREATE TABLE `categorie` (
+  `idCategorie` int(11) PRIMARY KEY NOT NULL AUTO_INCREMENT,
   `nomCategorie` varchar(255) NOT NULL,
   `reglement` text DEFAULT NULL,
   `lienFederation` varchar(255) NOT NULL
@@ -47,10 +49,10 @@ CREATE TABLE `categorie` (
 -- Déchargement des données de la table `categorie`
 --
 
-INSERT INTO `categorie` (`nomCategorie`, `reglement`, `lienFederation`) VALUES
-('C3', 'Catégorie des enfants de 14 à 17 ans : <i>speed-car</i>, véhicule automobile sans moteur monoplace proche d’une voiture de course, composé de quatre roues, dont un système de suspensions est autorisé. La direction est actionnée par un volant fermé. Le taille maximale autorisée est de 2,5 mètres par 1,2 mètre. Des freins efficaces sont obligatoires sur les quatres roues.', 'https://www.federation-caisses-a-savon.com/_files/ugd/2e6eb3_e48d9b79c5de4405bc0207288c90ec98.pdf'),
-('C4', 'Catégorie des adultes, à partir de 18 ans : <i>speed-car</i>, véhicule automobile sans moteur monoplace proche d’une voiture de course, composé de quatre roues, dont un système de suspensions est autorisé. La direction est actionnée par un volant fermé. Le taille maximale autorisée est de 2,5 mètres par 1,2 mètre. Des freins efficaces sont obligatoires sur les quatres roues.', 'https://www.federation-caisses-a-savon.com/_files/ugd/2e6eb3_e48d9b79c5de4405bc0207288c90ec98.pdf'),
-('C7', 'Catégorie des adultes, à partir de 18 ans : <i>carioli</i>, véhicule automobile sans moteur essentiellement composé de bois, hors quelques pièces (voir le règlement de la fédération ci-dessous) dont l’équipage est composé d’un conducteur, à l’avant, et d’un passager, le freineur, situé à l’arrière ; équivalent du <i>bobsleigh</i> sur route. Les freins sont au nombre de deux, actionnés vers le sol et indépendants. La taille maximale autorisée est de 1,85 mètre par 0,8 mètre.', 'https://www.federation-caisses-a-savon.com/_files/ugd/2e6eb3_130d78471c384b0d9115ffdf918832a5.pdf');
+INSERT INTO `categorie` (`idCategorie`, `nomCategorie`, `reglement`, `lienFederation`) VALUES
+(1, 'C3', 'Catégorie des enfants de 14 à 17 ans : <i>speed-car</i>, véhicule automobile sans moteur monoplace proche d’une voiture de course, composé de quatre roues, dont un système de suspensions est autorisé. La direction est actionnée par un volant fermé. Le taille maximale autorisée est de 2,5 mètres par 1,2 mètre. Des freins efficaces sont obligatoires sur les quatres roues.', '<a href="https://www.federation-caisses-a-savon.com/_files/ugd/2e6eb3_e48d9b79c5de4405bc0207288c90ec98.pdf"></a>'),
+(2, 'C4', 'Catégorie des adultes, à partir de 18 ans : <i>speed-car</i>, véhicule automobile sans moteur monoplace proche d’une voiture de course, composé de quatre roues, dont un système de suspensions est autorisé. La direction est actionnée par un volant fermé. Le taille maximale autorisée est de 2,5 mètres par 1,2 mètre. Des freins efficaces sont obligatoires sur les quatres roues.', '<a href="https://www.federation-caisses-a-savon.com/_files/ugd/2e6eb3_e48d9b79c5de4405bc0207288c90ec98.pdf"></a>'),
+(3, 'C7', 'Catégorie des adultes, à partir de 18 ans : <i>carioli</i>, véhicule automobile sans moteur essentiellement composé de bois, hors quelques pièces (voir le règlement de la fédération ci-dessous) dont l’équipage est composé d’un conducteur, à l’avant, et d’un passager, le freineur, situé à l’arrière ; équivalent du <i>bobsleigh</i> sur route. Les freins sont au nombre de deux, actionnés vers le sol et indépendants. La taille maximale autorisée est de 1,85 mètre par 0,8 mètre.', '<a href="https://www.federation-caisses-a-savon.com/_files/ugd/2e6eb3_130d78471c384b0d9115ffdf918832a5.pdf"></a>');
 
 -- --------------------------------------------------------
 
@@ -59,7 +61,7 @@ INSERT INTO `categorie` (`nomCategorie`, `reglement`, `lienFederation`) VALUES
 --
 
 CREATE TABLE `confrerie` (
-  `idConfrerie` int(11) NOT NULL,
+  `idConfrerie` int(11) PRIMARY KEY NOT NULL AUTO_INCREMENT,
   `bio` text DEFAULT NULL,
   `nomConfrerie` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -101,6 +103,7 @@ INSERT INTO `confrerie` (`idConfrerie`, `nomConfrerie`, `bio`) VALUES
 --
 
 CREATE TABLE `parcours` (
+  `idParcours` int(11) PRIMARY KEY NOT NULL AUTO_INCREMENT,
   `nomParcours` varchar(255) NOT NULL,
   `descriptif` varchar(255) NOT NULL,
   `distanceMetres` float NOT NULL
@@ -113,7 +116,7 @@ CREATE TABLE `parcours` (
 --
 
 CREATE TABLE `participant` (
-  `idParticipant` int(11) NOT NULL,
+  `idParticipant` int(11) PRIMARY KEY NOT NULL AUTO_INCREMENT,
   `nomParticipant` varchar(255) NOT NULL,
   `prenom` varchar(255) NOT NULL,
   `age` int(11) NOT NULL,

@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="css/programme.css">
 </head>
 <body>
+
+    <?php include header.php; ?>
+
     <h1>Honneur aux Participants, Gloire aux Vainqueurs</h1>
     <section id="contenu" class="para-image3">
         <div class="paragraphe">
@@ -114,5 +117,6 @@
             <!-- // Vertical Timeline -->
         </div>
     </section> 
+    <?php include footer.php ?>
 </body>
 </html>

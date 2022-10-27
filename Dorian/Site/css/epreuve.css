@@ -1,6 +1,6 @@
 #fond{
     background: #3a3a3a;
-    padding-bottom: 0;
+    padding-bottom: 60px;
 }
 #epreuve{
     position: relative;
@@ -13,100 +13,34 @@
     display: flex;
     flex-direction: column;
 }
-.grille-age{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    justify-content: center;
+
+.categorie{
+    margin: 20px 20% 0 20%;
+    background: linear-gradient(45deg,rgba(31, 31, 31, 0.6),rgba(31, 31, 31, 0.6)), url("https://images.unsplash.com/photo-1552840687-b25e05d08047?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80");
+    border-radius: 25px;
+    padding: 2% 5%;
+}
+.cat{
+    font-size: xx-large;
+    color: #FFCF33;
+    padding-left: 2.5em;
+    margin: 0 1.5em;
+    font-family: Arial, Helvetica;
 }
 
+.categorie a{
+    color:#fff;
+    font-family: Arial, Helvetica;
+}
 
-.categorie-adulte{
-    grid-column: 1;
+.parcours{
+    background: #3a3a3a;
+    margin-top: 5em;
+    padding: 0 0 2% 0;
+}
+.plac-parc{
+    margin:20 20% 0 20%;
     display: flex;
-    flex-direction: column;
-    text-align: center;
-    width: 100%;
-    height:31.25em ;
-}
-
-.categorie-enfant{
-    grid-column: 2;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    width: 100%;
-    height:31.25em;
-}
-
-.flipAd-container{
-    display: flex;
-    justify-content: space-around;
-}
-
-.flipEn-container{
-    display: flex;
-    justify-content: center;
-}
-
-img{
-    width: 100%;
-}
-
-
-
-
-
-
-
-.container {
-    width: 18.75em;
-    height: 25em;
-    perspective: 50em;
-}
-  
-.container:hover > .card {
-    cursor: pointer;
-    transform: rotateY(180deg);
-}
-  
-.card {
-    height: 100%;
-    width: 100%;
-    position: relative;
-    transition: transform 1500ms;
-    transform-style: preserve-3d;
-}
-  
-.front,
-.back {
-    height: 100%;
-    width: 100%;
-    border-radius: 2rem;
-    box-shadow: 0 0 5px 2px rgba(247, 66, 66, 0.25);
-    position: absolute;
-    backface-visibility: hidden;
-    justify-content: center;
-}
-.centre-img{
-    height: 100%;
-    width: 100%;
-    display: flex;
-    align-items: center;
-}
-.front{
-    background-color: aquamarine;
-    display: flex;
-}
-.front p{
-    text-align: center;
-    font-size: larger;
-}
-.back{
-    background-color: #ff4343;
-    transform: rotateY(180deg);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 5rem;
+    flex-direction: row;
+    gap:10px;
 }
