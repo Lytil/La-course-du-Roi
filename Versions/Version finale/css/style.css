@@ -6,6 +6,12 @@
     font-family: LABRIT ;
     src: url(../font/LABRIT.ttf);
 }
+@font-face {
+    font-family: GAL;
+    src: url(../font/GAL.ttf);
+}
+
+
 
 *{
     margin: 0;
@@ -18,15 +24,18 @@ body{
 }
 h1, h2{
     color: #C39D63;
-    font-family: LABRIT;
+    font-family: NGS;
     font-size: 9.28vh;
     text-align: center;
+    letter-spacing: 5px;
 }
 
 p{
     color:#fff;
     font-family: Arial, Helvetica;
     text-align: justify;
+    font-family: GAL;
+    font-size: large;
 }
 
 
