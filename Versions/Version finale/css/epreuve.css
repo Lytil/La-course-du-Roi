@@ -20,7 +20,7 @@
 
 .categorie{
     margin: 20px 20% 0 20%;
-    background: linear-gradient(45deg,rgba(31, 31, 31, 0.6),rgba(31, 31, 31, 0.6)), url("../image/banniere.png");
+    background: linear-gradient(45deg,rgba(31, 31, 31, 0.6),rgba(31, 31, 31, 0.6)), url("../image/confrerie.png");
     border-radius: 25px;
     padding: 2% 5%;
 }
