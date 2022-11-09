@@ -27,7 +27,7 @@
         <link rel="stylesheet" href="../css/connexion.css">
         <link rel="shortcut icon" href="../image/favicon.png">
     </head>
-    <body>
+    <body>  
         <form method="POST" action="">
             <p class="pre">Connexion à l'espace d'administration</p>
             <input type="text" id="idAdmin" name="idAdmin" placeholder="Identifiant" required><br>
