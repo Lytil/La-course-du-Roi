@@ -1,9 +1,7 @@
-
-@font-face{
-    font-family: NGS;
-    src:url(../font/NGS.ttf);
+@font-face {
+    font-family: GAL;
+    src: url(../font/GAL.ttf);
 }
-
 body{
     margin: 0;
     padding: 0;
@@ -27,7 +25,7 @@ body{
 
 .container a{
     text-decoration: none;
-    background: #ffcf33;
+    background: #C39D63;
     color: #fff;
     padding: 12px 24px;
     display: inline-block;

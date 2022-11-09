@@ -22,5 +22,11 @@
                 <h5></h5>
             </div>
         </div>
+        <div>
+            <div>
+                <h5><a href="mapsite.html">Plan du site</a></h5>
+                <h5><a href="">Mentions légales</a></h5>
+            </div>
+        </div>
     </footer>
 </html>
