@@ -2,7 +2,7 @@
 <html lang="fr">
     <head>
         <title></title>
-        <link rel="stylesheet" href="css/style404.css">
+        <link rel="stylesheet" href="style404.css">
     </head>
     <body>
         <div class="container">
