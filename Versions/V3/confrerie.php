@@ -1,6 +1,6 @@
 <?php
     $db=new
-    PDO('mysql:host=localhost;port=3306;dbname=lcdr','root','');
+    PDO('mysql:host=mysql-courseduroi.alwaysdata.net;dbname=courseduroi_lcdr','287105_lcdr','pasycraindre');
     $results=$db->query('SELECT nomConfrerie, bio FROM confrerie');
     $tab=$results->fetchAll();
     $results->closeCursor();
