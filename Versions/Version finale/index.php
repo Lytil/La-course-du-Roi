@@ -25,9 +25,12 @@
         <div class="swiper-wrapper">
         <!--slide -->
         <div class="swiper-slide" style="background: url(./image/lepuy-1.jpg) center/cover;"></div>
+        <div class="swiper-slide" style="background: url(./image/savonmarseille.png) center/cover;"></div>
         <div class="swiper-slide" style="background: url(./image/lepuy-2.jpg) center/cover;"></div>
         <div class="swiper-slide" style="background: url(./image/lepuy-3.jpg) center/cover;"></div>
+        <div class="swiper-slide" style="background: url(./image/lepuy-5.jpg) center/cover;"></div>
         <div class="swiper-slide" style="background: url(./image/lepuy-4.jpg) center/cover;"></div>
+        <div class="swiper-slide" style="background: url(./image/sardinescaisse.png) center/cover;"></div>
         <div class="swiper-slide" style="background: url(./image/lepuy-5.jpg) center/cover;"></div>
         </div>
             <div class="swiper-pagination"></div>

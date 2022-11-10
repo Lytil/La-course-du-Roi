@@ -218,7 +218,7 @@ header.sticky ul li a {
 }
 
 /*Confrerie et epreuve*/
-.confdegrade, .epreuve-container{
+.confdegrade, .epreuve-container, .container-form{
     position: relative;
     margin: 20px 20% 50px 20%;
     background: linear-gradient(45deg,rgba(188, 44, 26, 0.9),rgba(195, 157, 99, 0.9));
@@ -264,7 +264,49 @@ header.sticky ul li a {
     background-size:100%;
 }
 /*Fin Programme*/
+/* Epreuve */
+form
+{
+  background: rgba(255, 255, 255, .3);
+  padding: 3rem;
+  height: auto;
+  border-radius: 20px;
+  border-left: 1px solid rgba(255, 255, 255, .3);
+  border-top: 1px solid rgba(255, 255, 255, .3);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  -moz-backdrop-filter: blur(10px);
+  box-shadow: 20px 20px 40px -6px rgba(0, 0, 0, .2);
+  text-align: center;
+}
+input
+{
+  background: transparent;
+  border: none;
+  border-left: 1px solid rgba(255, 255, 255, .3);
+  border-top: 1px solid rgba(255, 255, 255, .3);
+  padding: 1rem;
+  width: 200px;
+  border-radius: 50px;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  -moz-backdrop-filter: blur(5px);
+  box-shadow: 4px 4px 60px rgba(0, 0, 0, .2);
+  color: WHITE;
+  font-weight: 500;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, .2);
+  transition: all .3s;
+  margin-bottom: 2em;
+}
 
+#submit:hover
+{
+  background-color: #1B539D;
+  cursor: pointer;
+  font-weight: 1000;
+  opacity: 0.7;
+  width: 210px;
+}
 
 
 /*Fin de Epreuves*/
@@ -274,9 +316,13 @@ footer{
     position: relative;
     background-color: #1f1f1f;
     justify-content: flex-start;
-    padding: 30px 30px 30px 200px;
+    padding: 5% 5% 5% 15%;
     gap: 50px;
     margin-top: 20px;
+}
+.placementf{
+    display: flex;
+    flex-direction: row;
 }
 .blocf{
     display: flex;
@@ -313,7 +359,15 @@ footer div h5 a , h5{
   display: flex;
   justify-content: center;
  }
-
+ .blocbas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+ }
+h5 > .nomf {
+    font-size: x-small;
+}
 
 
 /*----- PAGE ADMIN ------*/
