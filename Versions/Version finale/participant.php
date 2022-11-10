@@ -56,19 +56,25 @@
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/conf-pres.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
-
+</head>
 <body>
     <?php include("header.php");?>
     <div class="container-form">
-        <form method="POST" class="form-tab" action="">
-            <p class="pre">Pré-inscription</p>
+        <br>
+            <div class="container">
+        <form method="POST" action="">
+            <p>Pré-inscription à la course</p>
             <input type="text" id="nomParticipant" name="nomParticipant" placeholder="Nom" required>
             <input type="text" id="prenom" name="prenom" placeholder="Prénom" required><br>
             <input type="number" id="age" name="age" min="14" max="99" placeholder="Âge" required><br>
             <input type="text" id="adresse" name="adresse" placeholder="Adresse" required><br>
-            <input type="int" id="telephone" name="telephone" placeholder="Téléphone" required>
-            <input type="email" id="mail" name="mail" placeholder="Email" required><br>
-            <input type="submit" id="submit-bouton" value="Valider"><br>
+            <input type="int" class="telephone" id="telephone" name="telephone" pattern="[0]{1}[0-9]{9}" placeholder="Téléphone" required>
+            <input type="email" class="mail" id="mail" name="mail" pattern="^[\w]{1,}[\w.+-]{0,}@[\w-]{2,}([.][a-zA-Z]{2,}|[.][\w-]{2,}[.][a-zA-Z]{2,})$" placeholder="Email" required><br>
+            <input type="submit" id="submit" value="Valider"><br>
+            <p class="msgValidation"><?php echo $msg?></p>
         </form>
     </div>
+    <?php include ("footer.php") ?>
+    </div>
 </body>
+</html>
